@@ -1,0 +1,48 @@
+.wrapper__main-chat
+  .wrapper__main-chat__group-info
+    .group-edit
+      =link_to "#" ,class: "edit-btn" do
+        Edit
+    .group-id
+      test
+    .group-list-box
+      %h.group-list
+        Member : 
+      %h.group-list-name
+        masa
+    
+      
+        
+
+  .wrapper__main-chat__messages-list
+    .wrapper__messages
+      %p.messages-name
+        masa
+      %p.messages-time
+        2019/11/20(Wed) 17:42:01
+    %p.messages-chat
+      おはよう
+    .wrapper__messages
+      %p.messages-name
+        masa
+      %p.messages-time
+        2019/11/20(Wed) 17:42:01
+    %p.messages-chat
+      おはよう
+    
+  .wrapper__main-chat__messages-form
+    .wrapper__messages-box
+      %input.messages-text{:type => "text", :placeholder => "type a message"}
+      %label.messages-image
+        %i.far.fa-image
+        %input.messages-file{:type => "file",class:"image"}
+          
+    .wrapper__messages-submit
+      %input.submit-btn{:type => "submit", :value => "Send"}
+      
+      
+        
+    
+        
+      
+      
