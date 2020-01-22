@@ -1,0 +1,209 @@
+.wrapper{
+  width: 100vw;
+  display: flex;
+  
+
+  &__side-bar {
+    width: 300px;
+    height: 100vh;
+    background-color: #2f3e51
+  }
+
+  &__side-bar__user-name {
+    width: 300px;
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+      &__top-items {
+        width: 260px;
+        height: 20px;
+        background-color: #253141;
+        display: block;
+        }
+          .top-items__name {
+            line-height: center;
+            font-size: 16px;
+            color: #ffffff;
+            float: left;
+
+          }
+            
+          .top-items__icons {
+            width: 60px;
+            height: 20px;
+            background-color: #253141;
+            float: right;
+          }
+
+            .fas.fa-cog {
+              text-align: right;
+              color: #ffffff;
+              float: right;
+            }
+
+            .fa.fa-edit {
+              text-align: right;
+              color: #ffffff;
+              float: right;
+              padding: 0 5px;
+            }
+
+              .link-items {
+                text-decoration: none;
+                
+              }
+            
+
+              
+
+  &__side-bar__group-list {
+    width: 300px;
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+  }
+    &__groups {
+    }
+      .groups-name {
+        font-size: 15px;
+        color: #ffffff;
+        margin: 20px 20px 0;
+        font-size: 16px
+      }
+      .groups-message {
+        font-size: 11px;
+        color: #ffffff;
+        margin: 5px 20px 40px;
+      }
+
+    
+  
+
+  &__main-chat {
+    width: calc(100vw - 300px);
+    
+  }
+
+    &__main-chat__group-info {
+      width: calc(100vw - 300px);
+      height: 100px;
+      background-color: #ffffff;
+      
+    }
+
+    .group-edit {
+        
+    }
+      .edit-btn {
+        color: #00bbff;
+        width: 72px;
+        font-size: 16px;
+        height: 40px;
+        border: solid 1px #00BBFF;
+        padding: 10px 20px;
+        text-decoration: none;
+        float: right;
+        margin: 28px 40px;
+      }
+
+      .group-id {
+        color: #333333;
+        font-size: 20px;
+        padding: 35px 40px 15px;
+        
+      }
+
+      .group-list-box {
+        
+      }
+        .group-list {
+          color: #999999;
+          font-size: 12px;
+          padding-left: 40px;          
+          }
+
+        .group-list-name {
+          color: #999999;
+          font-size: 12px;
+        }
+
+  &__main-chat__messages-list {
+    width: calc(100vw - 300px);
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    
+  }
+    &__messages {
+      display: flex;
+    }
+      .messages-name {
+        color: #333333;
+        font-size: 16px;
+        padding: 35px 12px 0 40px;
+      }
+
+      .messages-time {
+        color: #999999;
+        font-size: 12px;
+        padding-top: 35px;
+      }
+
+    .messages-chat {
+        color: #434A54;
+        font-size: 14px;
+        padding: 12px 46px 0 40px;
+    }
+      
+    
+
+  &__main-chat__messages-form {
+    width: calc(100vw - 300px);
+    height: 90px;
+    background-color: #d2d2d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+    &__messages-box {
+      width: calc(100vw - 500px);
+      height: 50px;
+      position:relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
+
+      .messages-text {
+        background-color: #ffffff;
+        width: calc(100vw - 420px);
+        height: 50px;
+        padding-left: 10px;
+      }
+       
+      .messages-image {
+        position: absolute;
+        font-size: 23px;
+        padding-right: 10px;
+      }
+        .image {
+          display: none;
+        }
+    
+     &__messages-submit {
+
+    }
+      .submit-btn {
+        height: 50px;
+        border-style: none;
+        background-color: #00BBFF;
+        color: #ffffff;
+        font-size: 1.1em;
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+}
+
