@@ -2,11 +2,11 @@
   .wrapper__side-bar__user-name
     .wrapper__top-items
       .top-items__name
-        masa
+        = current_user.name
       .top-items__icons
         =link_to "#", class: 'link-items' do
           %i.fas.fa-cog
-        =link_to"#", class: 'link-items' do
+        =link_to edit_user_path(current_user), class: 'link-items' do
           %i.fa.fa-edit 
   
   .wrappr__side-bar__group-list
