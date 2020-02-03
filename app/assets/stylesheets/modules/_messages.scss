@@ -59,20 +59,20 @@
 
               
 
-  &__side-bar__group-list {
+  &__side-bar__groups-list {
     width: 300px;
     height: calc(100vh - 100px);
     background-color: #2f3e51;
   }
-    &__groups {
+    .group {
     }
-      .groups-name {
+      .group-name {
         font-size: 15px;
         color: #ffffff;
         margin: 20px 20px 0;
         font-size: 16px
       }
-      .groups-message {
+      .group-message {
         font-size: 11px;
         color: #ffffff;
         margin: 5px 20px 40px;
