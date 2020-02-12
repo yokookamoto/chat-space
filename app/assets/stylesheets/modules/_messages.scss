@@ -5,8 +5,11 @@
 
   &__side-bar {
     width: 300px;
-    height: 100vh;
-    background-color: #2f3e51
+    height:100vh;
+    background-color: #2f3e51;
+    float: left;
+    box-sizing: border-box;
+    
   }
 
   &__side-bar__user-name {
@@ -16,19 +19,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 5;
+    
+    top: 0;
   }
       &__top-items {
         width: 260px;
         height: 20px;
         background-color: #253141;
         display: block;
+        
         }
           .top-items__name {
             line-height: center;
             font-size: 16px;
             color: #ffffff;
             float: left;
-
           }
             
           .top-items__icons {
@@ -56,154 +63,184 @@
                 
               }
             
-
-              
-
   &__side-bar__groups-list {
-    width: 300px;
+    width: 260px;
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    overflow-y: scroll;
+    position: sticky;
+    bottom: 0;
+    a {text-decoration: none;}
   }
-    .group {
+              
+    .groups {
+      text-decoration: none;
+      box-sizing: border-box;
+        
+
     }
+                
       .group-name {
         font-size: 15px;
         color: #ffffff;
         margin: 20px 20px 0;
-        font-size: 16px
+        font-size: 16px;
+        border: 0;
       }
       .group-message {
         font-size: 11px;
         color: #ffffff;
         margin: 5px 20px 40px;
+        border: 0;
       }
+                
+            
+              
 
     
+            
   
-
   &__main-chat {
     width: calc(100vw - 300px);
+    height: 100vh;
+    position: fixed;
     
+    left: 300px;
+    z-index: 5;
   }
-
+    
     &__main-chat__group-info {
       width: calc(100vw - 300px);
       height: 100px;
       background-color: #ffffff;
       
     }
-
-    .group-edit {
-        
-    }
-      .edit-btn {
-        color: #00bbff;
-        width: 72px;
-        font-size: 16px;
-        height: 40px;
-        border: solid 1px #00BBFF;
-        padding: 10px 20px;
-        text-decoration: none;
-        float: right;
-        margin: 28px 40px;
+      
+      .group-edit {
+              
       }
-
-      .group-id {
-        color: #333333;
-        font-size: 20px;
-        padding: 35px 40px 15px;
-        
-      }
-
-      .group-list-box {
-        
-      }
-        .group-list {
-          color: #999999;
-          font-size: 12px;
-          padding-left: 40px;          
+        .edit-btn {
+          color: #00bbff;
+          width: 72px;
+          font-size: 16px;
+          height: 40px;
+          border: solid 1px #00BBFF;
+          padding: 10px 20px;
+          text-decoration: none;
+          float: right;
+          margin: 28px 40px;
+        }
+      
+        .group-id {
+          color: #333333;
+          font-size: 20px;
+          padding: 35px 40px 15px;
+        }
+      
+          .group-list-box {
+              
+          }
+            .group-list {
+              color: #999999;
+              font-size: 12px;
+              padding-left: 40px;          
+            }
+      
+          .group-list-name {
+            color: #999999;
+            font-size: 12px;
           }
 
-        .group-list-name {
-          color: #999999;
-          font-size: 12px;
-        }
 
-  &__main-chat__messages-list {
-    width: calc(100vw - 300px);
-    height: calc(100vh - 190px);
-    background-color: #fafafa;
-    
-  }
-    &__messages {
-      display: flex;
-    }
-      .messages-name {
-        color: #333333;
-        font-size: 16px;
-        padding: 35px 12px 0 40px;
-      }
+  
 
-      .messages-time {
-        color: #999999;
-        font-size: 12px;
-        padding-top: 35px;
-      }
-
-    .messages-chat {
-        color: #434A54;
-        font-size: 14px;
-        padding: 12px 46px 0 40px;
-    }
       
     
+        
 
-  &__main-chat__messages-form {
+  .messages {
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    padding: 40px 40px 90px;
+    height: calc(100vh - 100px - 90px);
     width: calc(100vw - 300px);
+    overflow-y: scroll;
+    position: sticky;
+    bottom: 90px;
+    left: 300px;
+    z-index: 0;
+    .message {
+      .upper-message {
+        display: flex;
+          &__user-name {
+            color: $black;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__date {
+            color: $light_gray;
+            font-size: 12px;
+            padding-left: 10px;
+          }
+      }
+      .lower-message {
+        margin-top: 10px;
+        margin-bottom: 40px;
+          &__content {
+            color: $black;
+            font-size: 14px;
+          }
+          &__image {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+          }
+      }
+    }
+  } 
+
+  
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
     height: 90px;
-    background-color: #d2d2d2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: calc(100% - 300px);
+    padding: 20px 50px 20px 40px;
+    position: fixed;
     
-  }
-    &__messages-box {
-      width: calc(100vw - 500px);
+    left: 300px;
+    z-index: 5;
+    &__message {
+      border: none;
+      float: left;
       height: 50px;
-      position:relative;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-right: 20px;
+      width: calc(100% - 150px);
+      padding-left: 10px;
     }
-
-      .messages-text {
-        background-color: #ffffff;
-        width: calc(100vw - 420px);
-        height: 50px;
-        padding-left: 10px;
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+        cursor: pointer;
       }
-       
-      .messages-image {
-        position: absolute;
-        font-size: 23px;
-        padding-right: 10px;
+      .hidden {
+        display: none;
       }
-        .image {
-          display: none;
-        }
-    
-     &__messages-submit {
-
     }
-      .submit-btn {
-        height: 50px;
-        border-style: none;
-        background-color: #00BBFF;
-        color: #ffffff;
-        font-size: 1.1em;
-        padding-left: 22px;
-        padding-right: 22px;
-      }
+    &__submit {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      cursor: pointer;
+    }
+  }
 }
-
