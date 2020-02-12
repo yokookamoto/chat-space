@@ -1,48 +1,31 @@
 .wrapper__main-chat
   .wrapper__main-chat__group-info
     .group-edit
-      =link_to "#" ,class: "edit-btn" do
+      =link_to edit_group_path(@group) ,class: "edit-btn" do
         Edit
     .group-id
-      test
+      = @group.name
     .group-list-box
       %h.group-list
         Member : 
       %h.group-list-name
-        masa
-    
-      
-        
+        - @members.each do |member|
+          = member.name
+  
+  .messages
+    = render @messages
 
-  .wrapper__main-chat__messages-list
-    .wrapper__messages
-      %p.messages-name
-        masa
-      %p.messages-time
-        2019/11/20(Wed) 17:42:01
-    %p.messages-chat
-      おはよう
-    .wrapper__messages
-      %p.messages-name
-        masa
-      %p.messages-time
-        2019/11/20(Wed) 17:42:01
-    %p.messages-chat
-      おはよう
-    
-  .wrapper__main-chat__messages-form
-    .wrapper__messages-box
-      %input.messages-text{:type => "text", :placeholder => "type a message"}
-      %label.messages-image
-        %i.far.fa-image
-        %input.messages-file{:type => "file",class:"image"}
-          
-    .wrapper__messages-submit
-      %input.submit-btn{:type => "submit", :value => "Send"}
-      
-      
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('far', 'image', class: 'form-image')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+
+  
+
         
-    
-        
-      
-      
+  
