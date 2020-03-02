@@ -1,3 +1,4 @@
+server '3.114.228.246', user: 'ec2-user', roles: %w{app db web}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -31,7 +32,7 @@
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-server '3.114.228.246', user: 'ec2-user', roles: %w{app db web}
+
 
 # Custom SSH Options
 # ==================
