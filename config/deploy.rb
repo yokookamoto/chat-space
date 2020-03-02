@@ -1,3 +1,4 @@
+# config valid only for current version of Capistrano
 lock '~>3.12.0'
 set :application, 'chat-space'
 set :repo_url,  'git@github.com:yokookamoto/chat-space.git'
@@ -17,12 +18,7 @@ set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
 
-after 'deploy:publishing', 'deploy:restart'
-namespace :deploy do
-  task :restart do
-    invoke 'unicorn:restart'
-  end
-end
+
 
 set :default_env, {
   rbenv_root: "/usr/local/rbenv",
