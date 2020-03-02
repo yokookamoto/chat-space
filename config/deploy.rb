@@ -22,6 +22,7 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+end
 
 set :default_env, {
   rbenv_root: "/usr/local/rbenv",
